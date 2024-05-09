@@ -1,3 +1,4 @@
+#ec2 vars
 variable "image_id" {
     type = string
     default = "ami-090252cbe067a9e58"
@@ -16,7 +17,7 @@ variable "common_tags" {
         terraform = "true"
     }
 }
-
+#security group vars
 variable "sg_name" {
     default = "allow_ssh"
 }
@@ -43,4 +44,15 @@ variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]
   
+}
+
+#r53 vars
+
+variable "zone_id" {
+    default = "Z0163449Y0Q3IH42Y44X"
+  
+}
+
+variable "domain_name" {
+    default = "daws78s.site"
 }
